@@ -1,0 +1,12 @@
+{
+    "name": "neo4j-backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "dependencies": {
+        "@apollo/server": "^4.12.0",
+        "@neo4j/graphql": "^3.24.4",
+        "graphql": "^16.10.0",
+        "neo4j-driver": "^5.28.1"
+    }
+}

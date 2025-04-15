@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  name: String!
+  bought: [Product!]! @relationship(type: "BOUGHT", direction: OUT)
+  liked: [Product!]! @relationship(type: "LIKED", direction: OUT)
+}
+
+type Product {
+  id: ID!
+  name: String!
+  category: String
+  price: Float
+  likedBy: [User!]! @relationship(type: "LIKED", direction: IN)
+  boughtBy: [User!]! @relationship(type: "BOUGHT", direction: IN)
+}
+
+type Query {
+  recommend(userId: ID!): [Product]
+}
